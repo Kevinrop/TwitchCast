@@ -48,4 +48,4 @@ MIT
 [ionic]:http://ionicframework.com//
 [monaca]:http://monaca.mobi
 [twitch]:https://github.com/justintv/twitch-api
-[download]:https://mega.co.nz/#!4g5n3DzR!X-ac6QKpz5w2Zkvs8fUvBWUKGIjhEggf-YSqHOypNws
+[download]:http://www.mediafire.com/download/aa1rv8kl7wme6hl/twitchcast-0.4.3-debug.apk.zip
