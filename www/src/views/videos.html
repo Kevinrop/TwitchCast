@@ -1,0 +1,33 @@
+<style>
+.item-thumbnail-left, .item-thumbnail-left .item-content{padding-left:145px}
+.item-thumbnail-left .item-content>.item-image,.item-thumbnail-left .item-content>img:first-child,.item-thumbnail-left>.item-image,.item-thumbnail-left>img:first-child{top:15px;max-height:85px;max-width:120px}
+</style>
+
+<ion-view title="title">
+    <ion-content has-header="true" has-tabs="true">
+        <div ng-if="period == 'true' && top == 'true'" class="tabs period">
+            <a class="tab-item" href="#/nav/top//week">Week</a>
+            <a class="tab-item" href="#/nav/top//month">Month</a>
+            <a class="tab-item" href="#/nav/top//all">All</a>
+        </div>
+        <div ng-if="period == 'true' && top != 'true'" class="tabs period">
+            <a class="tab-item" href="#/nav/videos/{{game}}/week">Week</a>
+            <a class="tab-item" href="#/nav/videos/{{game}}/month">Month</a>
+            <a class="tab-item" href="#/nav/videos/{{game}}/all">All</a>
+        </div>
+        <ion-list class="data">
+            <ion-item class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/video/{{ref}}/{{item._id}}">
+                <img src={{item.preview}}>
+                <h2>{{item.title}}</h2>
+                <p>{{item.channel.display_name}}</p>
+                <p ng-if="top == 'true' || item.description == null && item.game != null">Game: {{item.game}}</p>
+                <p ng-if="item.description != null">Description: {{item.description}}</p>
+                <p ng-if="top != 'true' && item.length < 60">Lenght: {{item.length}} sec</p>
+                <p ng-if="top != 'true' && item.length > 60 && item.length/60 < 60">Lenght: {{item.length / 60 | number:0}} min</p>
+                <p ng-if="top != 'true' && item.length/60 > 60">Lenght: {{item.length / 3600 | number:0}} hrs</p>
+            </ion-item>
+        </ion-list>
+        <div ng-include="'src/views/error.html'"></div>
+        <div ng-include="'src/views/pagination.html'"></div>
+    </ion-content>
+</ion-view>

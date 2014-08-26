@@ -1,0 +1,68 @@
+<ion-view title="title">
+    <ion-content has-header="true" has-tabs="true">
+        <ion-slide-box on-slide-changed="slide(index)" active-slide="default">                        
+            <ion-slide>
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <input type="text" ng-model="username" placeholder="Username">
+                    </label>
+                    <div class="button-bar">
+                        <a class="button" href="#nav/search/{{username}}" ng-click="save(username, check)">Channels list</a>
+                    </div>
+                </div>
+                <div class="list-inset">
+                    <ion-checkbox ng-init="check = false" ng-model="check">Remember me</ion-checkbox>
+                </div>
+                <div class="tabs tabs-icon-bottom">
+                    <a class="tab-item" href="#nav/about">About</a>
+                    <a class="tab-item" href="" ng-click="goto(1)">
+                        <b class="right">&#12297;</b>Search
+                    </a>
+                </div>
+            </ion-slide>
+            
+            <ion-slide>
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <input type="text" ng-model="input">
+                    </label>
+                    <div class="button-bar">
+                        <a class="button" href="#nav/search/s/{{input}}/streams">Streams</a>
+                        <a class="button" href="#nav/search/g/{{input}}/games">Games</a>
+                        <a class="button" href="#nav/search/c/{{input}}/channels">Channels</a>
+                    </div>
+                </div>
+                <div class="tabs tabs-icon-bottom">
+                    <a class="tab-item" href=""  ng-click="goto(0)">
+                        <b class="left">&#12296;</b>Following
+                    </a>
+                    <a class="tab-item" href=""  ng-click="goto(2)">
+                        <b class="right">&#12297;</b>Teams
+                    </a>
+                </div>
+            </ion-slide>
+            
+            <ion-slide>
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <input type="text" ng-model="team" placeholder="Team ID">
+                    </label>
+                    <div class="button-bar">
+                        <a class="button" href="#/nav/teams/{{team}}/{{team}}">Search</a>
+                    </div>
+                </div>
+                <div class="list list-inset">
+                    <div class="button-bar">
+                        <a class="button" href="#nav/teams">Teams list</a>
+                    </div>
+                </div>
+                <div class="tabs tabs-icon-bottom">
+                    <a class="tab-item" href="" ng-click="goto(1)">
+                        <b class="left">&#12296;</b>Search
+                    </a>
+                    <a class="tab-item" href="#nav/about">About</a>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>

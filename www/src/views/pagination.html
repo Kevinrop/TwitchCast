@@ -1,0 +1,9 @@
+<style>.list{padding-bottom:33px}</style>
+<div ng-if="error != 'true' && list.length > 0" class="tabs tabs-icon-bottom">
+    <a class="tab-item" href=""  ng-click="reload('prev')" ng-if="prev != null">
+        <b class="left">&#12296;</b>Previous
+    </a>
+    <a class="tab-item" href=""  ng-click="reload('next')" ng-if="list.length > 0">
+        <b class="right">&#12297;</b>Next
+    </a>
+</div>

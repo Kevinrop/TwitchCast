@@ -1,0 +1,16 @@
+<ion-view title="'Teams'">
+    <ion-content has-header="true" has-tabs="true">
+        <ion-list class="data">
+            <ion-item class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/teams/{{item.name}}/{{item.display_name}}">
+                <img ng-if="item.logo != null" src={{item.logo}}>
+                <img ng-if="item.logo == null" src='img/twitch.png'>
+                <h2>{{item.display_name}}</h2>
+                <p>ID: {{item.name}}</p>
+                <p>Updated at: {{item.updated_at}}</p>
+            </ion-item>
+        </ion-list>
+
+        <div ng-include="'src/views/error.html'"></div>
+        <div ng-include="'src/views/pagination.html'"></div>
+    </ion-content>
+</ion-view>

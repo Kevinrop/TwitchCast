@@ -1,0 +1,33 @@
+<ion-view title="title">
+    <ion-content has-header="true" has-tabs="true">
+        <ion-list ng-if="ref == 's'" class="data">
+            <ion-item class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/channel/{{item.name}}/{{item.display_name}}">
+                <img ng-if="item.logo != null" src={{item.logo}}>
+                <img ng-if="item.logo == null" src='img/twitch.png'>
+                <h2>{{item.display_name}}</h2>
+                <p>Views: {{item.views}}</p>
+                <p>Followers: {{item.followers}}</p>
+            </ion-item>
+        </ion-list>
+        <ion-list ng-if="ref == 'f'" class="data">
+            <ion-item class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/channel/{{item.channel.name}}/{{item.channel.display_name}}">
+                <img ng-if="item.channel.logo != null" src={{item.channel.logo}}>
+                <img ng-if="item.channel.logo == null" src='img/twitch.png'>
+                <h2>{{item.channel.display_name}}</h2>
+                <p>Views: {{item.channel.views}}</p>
+                <p>Followers: {{item.channel.followers}}</p>
+            </ion-item>
+        </ion-list>
+        <ion-list ng-if="ref == 't'" class="data">
+            <ion-item class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/channel/{{item.channel.name}}/{{item.channel.display_name}}">
+                <img ng-if="item.channel.image.size70 != null" src={{item.channel.image.size70}}>
+                <img ng-if="item.channel.image.size70 == null" src='img/twitch.png'>
+                <h2>{{item.channel.display_name}}</h2>
+                <p>{{item.channel.title}}</p>
+                <p>Viewers: {{item.channel.current_viewers}}</p>
+            </ion-item>
+        </ion-list>
+        <div ng-include="'src/views/error.html'"></div>
+        <div ng-if="ref != 't'" ng-include="'src/views/pagination.html'"></div>
+    </ion-content>
+</ion-view>
