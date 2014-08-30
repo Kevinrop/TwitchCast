@@ -16,7 +16,7 @@ Features
 
 Download
 --
-Compiled APK for android: [download]
+APK for android: [download]
 
 Notes
 --
@@ -38,7 +38,7 @@ It's my first attempt to work with a AngularJS (or any framework in general), an
 
 * [Ionic] - Advanced HTML5 Hybrid Mobile App Framework
 * [Monaca] - Hybrid mobile development cloud for cross-platform app. 
-* The [Twitch] API v2.
+* [Twitch] API v2.
 
 License
 --
@@ -48,4 +48,4 @@ MIT
 [ionic]:http://ionicframework.com//
 [monaca]:http://monaca.mobi
 [twitch]:https://github.com/justintv/twitch-api
-[download]:http://www.mediafire.com/download/aa1rv8kl7wme6hl/twitchcast-0.4.3-debug.apk.zip
+[download]:https://mega.co.nz/#!4g5n3DzR!X-ac6QKpz5w2Zkvs8fUvBWUKGIjhEggf-YSqHOypNws
