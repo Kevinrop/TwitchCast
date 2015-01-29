@@ -47,4 +47,4 @@ MIT
 [ionic]:http://ionicframework.com//
 [monaca]:http://monaca.mobi
 [twitch]:https://github.com/justintv/twitch-api
-[download]:https://mega.co.nz/#!5xIQEZyT!8kPpciwuC6wApFU1P2vHoo8mlnAa9IIlyxVKrcV4efg
+[download]:https://mega.co.nz/#!V4xwBAYa!EbBrSNvuH0HSY-WxWYitdV28E45MWDLTR5t_XuIk8Ms
