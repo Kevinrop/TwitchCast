@@ -27,6 +27,7 @@ Change Log
  **1.0.1**
 
  - Fixed online streams.
+ - Added update search.
  - Minor color adjustments.
 
 **1.0.0**
