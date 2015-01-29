@@ -10,12 +10,21 @@ angular.module('twitchcast', [
         abstract: true,
         templateUrl: 'src/views/navigation.html'
     })
-    .state('nav.about', {
-        url: '/about',
+    .state('nav.more', {
+        url: '/more',
         views: {
             'search-tab': {
-                templateUrl: 'src/views/about.html',
+                templateUrl: 'src/views/more.html',
                 controller: 'more'
+            }
+        }
+    })
+    .state('nav.update', {
+        url: '/update',
+        views: {
+            'search-tab': {
+                templateUrl: 'src/views/update.html',
+                controller: 'update'
             }
         }
     })
