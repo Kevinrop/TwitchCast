@@ -35,7 +35,7 @@ angular.module('twitchcast.controllers', [])
 .controller('update', function($scope, $stateParams, $http) {
     $http.get('http://www.googledrive.com/host/0B2JBNspfO2NiM1otcnBVbDBnWUU')
     .success(function(data) {
-        if(data.version > 3){
+        if(data.version > 2){
             $scope.title = 'New Update';
             
             $scope.open = function (url) {
