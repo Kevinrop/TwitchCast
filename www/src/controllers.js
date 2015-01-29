@@ -32,6 +32,25 @@ angular.module('twitchcast.controllers', [])
     $scope.slide();
     $scope.default = 1;
 })
+.controller('update', function($scope, $stateParams, $http) {
+    $http.get('http://www.googledrive.com/host/0B2JBNspfO2NiM1otcnBVbDBnWUU')
+    .success(function(data) {
+        if(data.version > 3){
+            $scope.title = 'New Update';
+            
+            $scope.open = function (url) {
+                window.open(data.url, '_system');
+            };
+        }
+        else{
+            $scope.title = 'No Updates';
+        }
+    })
+    .error(function() {
+        $scope.error = 'true';
+        $scope.title = 'Service Unavailable';
+    });
+})
 .controller('games', function($scope, $stateParams, $http, $ionicScrollDelegate, URLservice) {    
     $scope.reload = function (offset) {
         if(offset == 'next'){
