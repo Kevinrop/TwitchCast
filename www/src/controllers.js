@@ -279,7 +279,7 @@ angular.module('twitchcast.controllers', [])
     .success(function(auth) {
         var sig = auth.sig;
         var token = auth.token;
-        var url = 'http://usher.twitch.tv/select/' + channel + '.m3u8?allow_source=true&type=any&nauthsig=' + sig + '&nauth=' + token;
+        var url = 'http://usher.twitch.tv/api/channel/hls/' + channel + '.m3u8?sig=' + sig + '&token=' + token + '&allow_source=true';
 
         $http.get(url)
         .success(function(data) {
