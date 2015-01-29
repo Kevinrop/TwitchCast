@@ -1,0 +1,20 @@
+<ion-view title="title">
+    <ion-content has-header="true" has-tabs="true">
+        <div ng-if="error != 'true'">
+            <div ng-if="title == 'No Updates'" class="card">
+                <div class="item item-text-wrap">You already have the latest version available.</div>
+            </div>
+            <div ng-if="title == 'New Update'">
+                <div class="card">
+                    <div class="item item-text-wrap">There is a new version available.</div>
+                </div>
+                <div class="list list-inset about">
+                   <a ng-click="open()" href="" class="item item-icon-left">Download APK</a>
+                </div>
+            </div>
+        </div>
+        <div ng-if="error == 'true'" class="card">
+            <div class="item item-text-wrap">Error connecting to the service.<br>Please try again.</div>
+        </div>
+    </ion-content>
+</ion-view>
