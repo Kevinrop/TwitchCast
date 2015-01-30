@@ -1,10 +1,10 @@
 TwitchCast
 ==
-A unofficial Twitch mobile app
+A unofficial Twitch android app
 
-Just a simple web app I've made to see the Twitch's Highlights and Past Broadcasts (that cannot be seen thru any app I've tested).
+TwitchCast is a simple android app to see the Twitch's VOD: Highlights and Past Broadcasts (that cannot be seen yet thu the official app) and online streams.
 
-I've made it a while ago, but it may be usefull for someone... so i'm sharing it.
+You need a video player compatible with flv files and m3u playlists.
 
 Features
 --
@@ -18,8 +18,9 @@ APK for android: [download]
 
 Notes
 --
+* As it is a web/hibrid app, it may work on iOS and any browser with CORS enabled.
 * The Past Broadcasts aren't stored on a single file, but in many parts (~30min each).
-* Highlights gets the full broadcast.
+* Highlights gets the full broadcast, not the single chunk.
 * No chat or subscription support.
 
 Change Log
