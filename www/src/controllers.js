@@ -55,7 +55,10 @@ angular.module('twitchcast.controllers', [])
     $http.get('http://www.googledrive.com/host/0B2JBNspfO2NiM1otcnBVbDBnWUU')
     .success(function(data) {
         if(data.version > 3){
-            alert('New Update Available');
+            var getver = confirm('A new update is available, download now?');
+            if (getver == true) {
+                window.open(data.url, '_system');
+            }
         }
     });
     $scope.reload = function (offset) {
