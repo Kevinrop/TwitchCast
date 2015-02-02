@@ -35,7 +35,7 @@ angular.module('twitchcast.controllers', [])
 .controller('update', function($scope, $stateParams, $http) {
     $http.get('http://www.googledrive.com/host/0B2JBNspfO2NiM1otcnBVbDBnWUU')
     .success(function(data) {
-        if(data.version > 2){
+        if(data.version > 3){
             $scope.title = 'New Update';
             
             $scope.open = function (url) {
@@ -51,7 +51,13 @@ angular.module('twitchcast.controllers', [])
         $scope.title = 'Service Unavailable';
     });
 })
-.controller('games', function($scope, $stateParams, $http, $ionicScrollDelegate, URLservice) {    
+.controller('games', function($scope, $stateParams, $http, $ionicScrollDelegate, URLservice) {   
+    $http.get('http://www.googledrive.com/host/0B2JBNspfO2NiM1otcnBVbDBnWUU')
+    .success(function(data) {
+        if(data.version > 3){
+            alert('New Update Available');
+        }
+    });
     $scope.reload = function (offset) {
         if(offset == 'next'){
             var url = $scope.next + '&callback=JSON_CALLBACK';
