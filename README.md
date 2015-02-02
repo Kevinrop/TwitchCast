@@ -26,8 +26,9 @@ Notes
 Change Log
 --
  **1.0.2**
+ 
  - Added support for the new VOD format.
- - Added start message on update.
+ - Added alert message on update.
  
  **1.0.1**
 
