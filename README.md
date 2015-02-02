@@ -25,12 +25,13 @@ Notes
 
 Change Log
 --
- **1.0.2**
- 
+
+**1.0.2**
+
  - Added support for the new VOD format.
  - Added alert message on update.
- 
- **1.0.1**
+
+**1.0.1**
 
  - Fixed online streams.
  - Added update search.
