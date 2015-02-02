@@ -149,13 +149,45 @@ angular.module('twitchcast.controllers', [])
 .controller('video', function($scope, $stateParams, $http) { 
     $http.jsonp('https://api.twitch.tv/api/videos/' + $stateParams.id + '?callback=JSON_CALLBACK')
     .success(function(data) {
-        $scope._live = data.chunks.live;
-        $scope._720p = data.chunks["720p"];
-        $scope._480p = data.chunks["480p"];
-        $scope._360p = data.chunks["360p"];
-        $scope._240p = data.chunks["240p"];
-        $scope.title = 'Select Quality';
-        
+        if(data.api_id.slice(0, 1) == 'v'){
+            var id = data.api_id;
+            
+            $http.jsonp('https://api.twitch.tv/api/vods/' + id.slice(1, id.length) + '/access_token?callback=JSON_CALLBACK')
+            .success(function(auth) {
+                console.log(auth)
+                var sig = auth.sig;
+                var token = auth.token;
+                var url = 'http://usher.twitch.tv/vod/' + id.slice(1, id.length) + '?nauth=' + token + '&nauthsig=' + sig;
+
+                $http.get(url)
+                .success(function(data) {
+                    var dir = /http?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.,~#?&//=]*)/gi;
+                    var fmt = /NAME="(.*?)"/gi;
+                    
+                    $scope.type = 'vod';
+                    $scope.fmt = data.match(fmt);
+                    $scope.list = data.match(dir);
+                    $scope.title = 'Select Quality';
+                })
+                .error(function() {
+                    $scope.error = 'true';
+                    $scope.title = 'Playlist Unavailable';
+                });
+            })
+            .error(function() {
+                $scope.error = 'true';
+                $scope.title = 'Service Unavailable';
+            });
+        }
+        else{
+            $scope.type = 'chunk';
+            $scope._live = data.chunks.live;
+            $scope._720p = data.chunks["720p"];
+            $scope._480p = data.chunks["480p"];
+            $scope._360p = data.chunks["360p"];
+            $scope._240p = data.chunks["240p"];
+            $scope.title = 'Select Quality';
+        }
     })
     .error(function() {
         $scope.error = 'true';
