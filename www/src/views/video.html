@@ -1,34 +1,39 @@
 <ion-view title="title">
     <ion-content has-header="true" has-tabs="true">
-        <div class="list-inset">
-            <div class="quality" ng-switch on="quality">
-                <span ng-switch-when="5"><b>Quality: </b>Source</span>
-                <span ng-switch-when="4"><b>Quality: </b>High</span>
-                <span ng-switch-when="3"><b>Quality: </b>Medium</span>
-                <span ng-switch-when="2"><b>Quality: </b>Low</span>
-                <span ng-switch-when="1"><b>Quality: </b>Mobile</span>
-            </div>
-            <div class="range">
-                <i class="icon ion-image"></i>
-                <input type="range" ng-model="quality" min="1" max="5" value="{{quality}}">
-            </div>
+        <div class="list list-inset" ng-if="type == 'vod' && error != 'true'">
+            <a ng-repeat="item in list" ng-click="open(item)" href="" class="item item-icon-left">{{ fmt[$index].split('"')[1] }}</a>
         </div>
-        <div class="list list-inset" ng-if="error != 'true'">
-            <div ng-if="quality == 5" ng-repeat="item in _live">
-                <a ng-click="open(item.url)" href="" class="item item-icon-left">Part {{$index + 1}}</a>
+        <div ng-if="type =='chunk' && error != 'true'">
+            <div class="list-inset">
+                <div class="quality" ng-switch on="quality">
+                    <span ng-switch-when="5"><b>Quality: </b>Source</span>
+                    <span ng-switch-when="4"><b>Quality: </b>High</span>
+                    <span ng-switch-when="3"><b>Quality: </b>Medium</span>
+                    <span ng-switch-when="2"><b>Quality: </b>Low</span>
+                    <span ng-switch-when="1"><b>Quality: </b>Mobile</span>
+                </div>
+                <div class="range">
+                    <i class="icon ion-image"></i>
+                    <input type="range" ng-model="quality" min="1" max="5" value="{{quality}}">
+                </div>
             </div>
-            <div ng-if="quality == 4" ng-repeat="item in _720p">
-                <a ng-if="item.url != null" ng-click="open(item.url)" href="" class="item item-icon-left">Part {{$index + 1}}</a>
+            <div class="list list-inset">
+                <div ng-if="quality == 5" ng-repeat="item in _live">
+                    <a ng-click="open(item.url)" href="" class="item item-icon-left">Part {{$index + 1}}</a>
+                </div>
+                <div ng-if="quality == 4" ng-repeat="item in _720p">
+                    <a ng-if="item.url != null" ng-click="open(item.url)" href="" class="item item-icon-left">Part {{$index + 1}}</a>
+                </div>
+                <div ng-if="quality == 3" ng-repeat="item in _480p">
+                    <a ng-if="item.url != null" ng-click="open(item.url)" href="" class="item item-icon-left">Part {{$index + 1}}</a>
+                </div>
+                <div ng-if="quality == 2" ng-repeat="item in _360p">
+                    <a ng-if="item.url != null" ng-click="open(item.url)" href="" class="item item-icon-left">Part {{$index + 1}}</a>
+                </div>
+                <div ng-if="quality == 1" ng-repeat="item in _240p">
+                    <a ng-if="item.url != null" ng-click="open(item.url)" href="" class="item item-icon-left">Part {{$index + 1}}</a>
+                </div>   
             </div>
-            <div ng-if="quality == 3" ng-repeat="item in _480p">
-                <a ng-if="item.url != null" ng-click="open(item.url)" href="" class="item item-icon-left">Part {{$index + 1}}</a>
-            </div>
-            <div ng-if="quality == 2" ng-repeat="item in _360p">
-                <a ng-if="item.url != null" ng-click="open(item.url)" href="" class="item item-icon-left">Part {{$index + 1}}</a>
-            </div>
-            <div ng-if="quality == 1" ng-repeat="item in _240p">
-                <a ng-if="item.url != null" ng-click="open(item.url)" href="" class="item item-icon-left">Part {{$index + 1}}</a>
-            </div>   
         </div>
         <div ng-include="'src/views/error.html'"></div>
     </ion-content>
