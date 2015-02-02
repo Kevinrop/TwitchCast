@@ -19,7 +19,7 @@ Get it from [MEGA] or [Google Drive]
 Notes
 --
 * As it is a web/hibrid app, it may work on iOS and any browser with CORS enabled.
-* The Past Broadcasts aren't stored on a single file, but in many parts (~30min each).
+* The old format Broadcasts aren't stored on a single file, but in many parts (~30min each).
 * Highlights gets the full broadcast, not the single chunk.
 * No chat or subscription support.
 
