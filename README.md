@@ -14,7 +14,7 @@ Features
 
 Download
 --
-APK for android: [download]
+Get it from [MEGA] or [Google Drive]
 
 Notes
 --
@@ -54,4 +54,5 @@ MIT
 [ionic]:http://ionicframework.com//
 [monaca]:http://monaca.mobi
 [twitch]:https://github.com/justintv/twitch-api
-[download]:https://mega.co.nz/#!BwIniLLD!bvNvsjRwKXnRbr__wY4KWP9OLzSmpqRAUAWcUK_bWjw
+[mega]:https://mega.co.nz/#!BwIniLLD!bvNvsjRwKXnRbr__wY4KWP9OLzSmpqRAUAWcUK_bWjw
+[google drive]:https://drive.google.com/open?id=0B2JBNspfO2NiMWNZbEc3UjdIT1E&authuser=0
