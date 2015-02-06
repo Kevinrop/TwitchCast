@@ -16,6 +16,10 @@ Download
 --
 Get it from [MEGA] or [Google Drive]
 
+Screenshots
+--
+You can see the pictures on this Google Drive [folder].
+
 Notes
 --
 * As it is a web/hibrid app, it may work on iOS and any browser with CORS enabled.
@@ -56,3 +60,4 @@ MIT
 [twitch]:https://github.com/justintv/twitch-api
 [mega]:https://mega.co.nz/#!BwIniLLD!bvNvsjRwKXnRbr__wY4KWP9OLzSmpqRAUAWcUK_bWjw
 [google drive]:https://drive.google.com/open?id=0B2JBNspfO2NiMWNZbEc3UjdIT1E&authuser=0
+[folder]:https://drive.google.com/folderview?id=0B2JBNspfO2NifnFGME90YUhvYXNjdXVwZlVwbW0yaUViWWVlRXVleGcyeG9NOEt5RlByaXc&usp=sharing
