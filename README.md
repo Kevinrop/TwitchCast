@@ -30,6 +30,10 @@ Notes
 Change Log
 --
 
+**1.0.3**
+
+ - Fixed online streams (again).
+
 **1.0.2**
 
  - Added support for the new VOD format.
@@ -58,6 +62,6 @@ MIT
 [ionic]:http://ionicframework.com//
 [monaca]:http://monaca.mobi
 [twitch]:https://github.com/justintv/twitch-api
-[mega]:https://mega.co.nz/#!BwIniLLD!bvNvsjRwKXnRbr__wY4KWP9OLzSmpqRAUAWcUK_bWjw
-[google drive]:https://drive.google.com/open?id=0B2JBNspfO2NiMWNZbEc3UjdIT1E&authuser=0
+[mega]:https://mega.co.nz/#!oxwxxC4R!PMbKMiWfPM3LCwQfkVMz4KuN7hns84OPDTaar1oCSt8
+[google drive]:https://drive.google.com/open?id=0B2JBNspfO2Nib2FFTTJqdE1jT1E&authuser=0
 [folder]:https://drive.google.com/folderview?id=0B2JBNspfO2NifnFGME90YUhvYXNjdXVwZlVwbW0yaUViWWVlRXVleGcyeG9NOEt5RlByaXc&usp=sharing
