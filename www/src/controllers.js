@@ -335,7 +335,7 @@ angular.module('twitchcast.controllers', [])
 .controller('stream', function($scope, $stateParams, $http) {
     var channel = $stateParams.name;
 
-    $http.jsonp('https://api.twitch.tv/api/channels/' + channel + '/access_token?callback=JSON_CALLBACK')
+    $http.jsonp('https://api.twitch.tv/api/channels/' + channel + '/access_token')
     .success(function(auth) {
         var sig = auth.sig;
         var token = auth.token;
