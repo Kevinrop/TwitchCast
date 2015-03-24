@@ -14,7 +14,7 @@ Features
 
 Download
 --
-Get it from [MEGA] or [Google Drive]
+Now you can get it from the [Play Store]
 
 Screenshots
 --
@@ -62,6 +62,5 @@ MIT
 [ionic]:http://ionicframework.com//
 [monaca]:http://monaca.mobi
 [twitch]:https://github.com/justintv/twitch-api
-[mega]:https://mega.co.nz/#!oxwxxC4R!PMbKMiWfPM3LCwQfkVMz4KuN7hns84OPDTaar1oCSt8
-[google drive]:https://drive.google.com/open?id=0B2JBNspfO2Nib2FFTTJqdE1jT1E&authuser=0
+[play store]:https://play.google.com/store/apps/details?id=twitch.cast
 [folder]:https://drive.google.com/folderview?id=0B2JBNspfO2NifnFGME90YUhvYXNjdXVwZlVwbW0yaUViWWVlRXVleGcyeG9NOEt5RlByaXc&usp=sharing
