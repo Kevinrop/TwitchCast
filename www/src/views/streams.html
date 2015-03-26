@@ -8,7 +8,7 @@
 <ion-view title="title">
     <ion-content has-header="true" has-tabs="true">
         <ion-list class="data">
-            <ion-item class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/stream/{{ref}}/{{item.channel.name}}">
+            <ion-item analytics-on analytics-category="Stream" analytics-label="{{item.channel.display_name}}" class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/stream/{{ref}}/{{item.channel.name}}">
                 <img src={{item.preview.medium}}>
                 <h2>{{item.channel.status}}</h2>
                 <p>Viewers: {{item.viewers}}</p>

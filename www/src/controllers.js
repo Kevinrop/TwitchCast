@@ -32,7 +32,7 @@ angular.module('twitchcast.controllers', [])
     $scope.slide();
     $scope.default = 1;
 })
-.controller('games', function($scope, $stateParams, $http, $ionicScrollDelegate, URLservice) {   
+.controller('games', function($scope, $stateParams, $http, $ionicScrollDelegate, URLservice) {
     $scope.reload = function (offset) {
         if(offset == 'next'){
             var url = $scope.next + '&callback=JSON_CALLBACK';
@@ -135,11 +135,10 @@ angular.module('twitchcast.controllers', [])
             
             $http.jsonp('https://api.twitch.tv/api/vods/' + id.slice(1, id.length) + '/access_token?callback=JSON_CALLBACK')
             .success(function(auth) {
-                console.log(auth)
                 var sig = auth.sig;
                 var token = auth.token;
                 var url = 'http://usher.twitch.tv/vod/' + id.slice(1, id.length) + '?nauth=' + token + '&nauthsig=' + sig;
-
+                
                 $http.get(url)
                 .success(function(data) {
                     var dir = /http?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.,~#?&//=]*)/gi;
@@ -306,8 +305,8 @@ angular.module('twitchcast.controllers', [])
 })
 .controller('stream', function($scope, $stateParams, $http) {
     var channel = $stateParams.name;
-
-    $http.jsonp('https://api.twitch.tv/api/channels/' + channel + '/access_token')
+    
+    $http.get('https://api.twitch.tv/api/channels/' + channel + '/access_token')
     .success(function(auth) {
         var sig = auth.sig;
         var token = auth.token;

@@ -16,7 +16,7 @@
             <a class="tab-item" href="#/nav/videos/{{game}}/all">All</a>
         </div>
         <ion-list class="data">
-            <ion-item class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/video/{{ref}}/{{item._id}}">
+            <ion-item analytics-on analytics-category="Video" analytics-label="{{item.channel.display_name}}" class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/video/{{ref}}/{{item._id}}">
                 <img src={{item.preview}}>
                 <h2>{{item.title}}</h2>
                 <p>{{item.channel.display_name}}</p>

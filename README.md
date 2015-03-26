@@ -30,6 +30,10 @@ Notes
 Change Log
 --
 
+**1.0.4**
+
+ - Migrated to Intel XDK.
+
 **1.0.3**
 
  - Fixed online streams (again).
@@ -51,7 +55,8 @@ Change Log
 
 Tech
 --
-* [Ionic] - Advanced HTML5 Hybrid Mobile App Framework
+* [Ionic] - Advanced HTML5 Hybrid Mobile App Framework.
+* [Intel XDK] - HTML5 Cross-platform Development Tool.
 * [Monaca] - Hybrid mobile development cloud for cross-platform app. 
 * [Twitch] API v2.
 
@@ -59,7 +64,8 @@ License
 --
 MIT
 
-[ionic]:http://ionicframework.com//
+[ionic]:http://ionicframework.com
+[intel xdk]:https://software.intel.com/en-us/html5/tools
 [monaca]:http://monaca.mobi
 [twitch]:https://github.com/justintv/twitch-api
 [play store]:https://play.google.com/store/apps/details?id=twitch.cast

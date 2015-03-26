@@ -6,7 +6,7 @@
 <ion-view title="title">
     <ion-content has-header="true" has-tabs="true">
         <ion-list ng-if="top == 'true'" class="data">
-            <ion-item class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/game/{{item.game.name}}">
+            <ion-item analytics-on analytics-category="Game" analytics-label="{{item.game.name}}" class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/game/{{item.game.name}}">
                 <img src={{item.game.logo.medium}}>
                 <h2>{{item.game.name}}</h2>
                 <p>Viewers: {{item.viewers}}</p>
@@ -14,7 +14,7 @@
             </ion-item>  
         </ion-list>
         <ion-list ng-if="top == 'false'" class="data">
-            <ion-item class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/game/{{item.name}}">
+            <ion-item analytics-on analytics-category="Game" analytics-label="{{item.name}}"class="item item-thumbnail-left" ng-repeat="item in list" type="item-text-wrap" href="#/nav/game/{{item.name}}">
                 <img src={{item.logo.medium}}>
                 <h2>{{item.name}}</h2>
                 <p>Popularity: {{item.popularity}}</p>

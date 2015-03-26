@@ -1,9 +1,11 @@
 angular.module('twitchcast', [
     'ionic',
     'twitchcast.services',
-    'twitchcast.controllers'
+    'twitchcast.controllers',
+    'angulartics',
+    'angulartics.google.analytics'
 ])
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $analyticsProvider) {
     $stateProvider
     .state('nav', {
         url: '/nav',
