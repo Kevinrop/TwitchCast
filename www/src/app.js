@@ -19,15 +19,6 @@ angular.module('twitchcast', [
             }
         }
     })
-    .state('nav.update', {
-        url: '/update',
-        views: {
-            'search-tab': {
-                templateUrl: 'src/views/update.html',
-                controller: 'update'
-            }
-        }
-    })
     .state('nav.games', {
         url: '/games',
         views: {
