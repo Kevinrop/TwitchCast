@@ -22,9 +22,9 @@
                 <p>{{item.channel.display_name}}</p>
                 <p ng-if="top == 'true' || item.description == null && item.game != null">Game: {{item.game}}</p>
                 <p ng-if="item.description != null">Description: {{item.description}}</p>
-                <p ng-if="top != 'true' && item.length < 60">Lenght: {{item.length}} sec</p>
+                <p ng-if="top != 'true' && item.length < 60">Length: {{item.length}} sec</p>
                 <p ng-if="top != 'true' && item.length > 60 && item.length/60 < 60">Lenght: {{item.length / 60 | number:0}} min</p>
-                <p ng-if="top != 'true' && item.length/60 > 60">Lenght: {{item.length / 3600 | number:0}} hrs</p>
+                <p ng-if="top != 'true' && item.length/60 > 60">Length: {{item.length / 3600 | number:0}} hrs</p>
             </ion-item>
         </ion-list>
         <div ng-include="'src/views/error.html'"></div>
